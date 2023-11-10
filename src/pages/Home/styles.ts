@@ -10,7 +10,8 @@ export const Container = styled.main`
 
   h2 {
     margin-bottom: 4rem;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    color: ${(props) => props.theme['base-subtitle']};
   }
 
   @media (max-width: 992px) {
