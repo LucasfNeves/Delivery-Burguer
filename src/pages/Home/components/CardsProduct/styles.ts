@@ -35,7 +35,7 @@ export const ContainerCard = styled.article`
   }
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: 95%;
     margin-bottom: 1rem;
     border-radius: 6px;
 
@@ -101,7 +101,7 @@ export const SectionAddItem = styled.footer`
     flex-direction: column;
     gap: 1rem;
     bottom: 1.5rem;
-    padding: 0%.5 0;
+    padding: 0.5rem 0;
 
     .price {
       h4 {

@@ -49,6 +49,6 @@ export const ContainerCards = styled.section`
   @media (max-width: 768px) {
     width: 90%;
     grid-template-columns: 1fr;
-    justify-items: flex-start;
+    justify-items: center;
   }
 `
