@@ -21,12 +21,11 @@ export const HeaderContainer = styled.header`
   }
 
   @media (max-width: 992px) {
-    padding: 0 1.5rem;
     width: 100%;
   }
 
   @media (max-width: 480px) {
-    padding: 0 1.5rem;
+    padding: 0;
     width: 100vw;
 
     img {
