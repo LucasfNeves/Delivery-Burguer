@@ -13,7 +13,6 @@ export const LayoutContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding: 0 0.5rem;
-    width: 100%;
+    width: 100vw;
   }
 `
