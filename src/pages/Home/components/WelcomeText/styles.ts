@@ -145,8 +145,7 @@ export const SubLegend = styled.div`
   @media (max-width: 537px) {
     width: 100%;
     flex-direction: column;
-    gap: 2rem;
-    padding: 1rem 0;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
   }
