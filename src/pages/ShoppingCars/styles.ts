@@ -8,7 +8,7 @@ export const FormContainer = styled.form`
   gap: 5rem;
 
   @media (max-width: 1400px) {
-    margin-top: 5rem;
+    margin-top: 3rem;
     grid-template-columns: 1fr;
     grid-template-areas: 'form' 'shoppingCar';
     gap: 2rem;
