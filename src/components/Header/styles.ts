@@ -24,6 +24,11 @@ export const HeaderContainer = styled.header`
     width: 100%;
   }
 
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+    width: 100%;
+  }
+
   @media (max-width: 480px) {
     padding: 0 2rem;
     width: 100%;
