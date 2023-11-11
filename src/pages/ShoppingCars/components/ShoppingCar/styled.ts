@@ -16,6 +16,7 @@ export const ShoppingCarContainer = styled.section`
     width: 90%;
     border-radius: 6px;
     margin: 0;
+    margin-bottom: 3rem;
   }
 `
 export const ItensSelectedContainer = styled.ul`
