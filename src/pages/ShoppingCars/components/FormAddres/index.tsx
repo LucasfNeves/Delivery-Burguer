@@ -2,13 +2,13 @@ import { MapPinLine } from 'phosphor-react'
 import {
   ContainerInput,
   InputWidth200,
-  InputRua,
   InputComplement,
   InputCity,
   InputSelect,
   SectionFormAddress,
   FillYourRequestContainer,
   TitleSectionFormAddress,
+  InputRuaAndCep,
 } from './styled'
 import { SectionPayment } from '../FormPayment'
 
@@ -24,10 +24,10 @@ export function FormCompledYourRequest() {
           <p>Informe o endereço onde deseja receber seu pedido</p>
         </TitleSectionFormAddress>
         <ContainerInput>
-          <InputWidth200 type="number" placeholder="CEP" />
+          <InputRuaAndCep type="number" placeholder="CEP" />
         </ContainerInput>
         <ContainerInput>
-          <InputRua type="text" id="rua" placeholder="Rua" />
+          <InputRuaAndCep type="text" id="rua" placeholder="Rua" />
         </ContainerInput>
         <ContainerInput>
           <InputWidth200 type="number" placeholder="Número" />

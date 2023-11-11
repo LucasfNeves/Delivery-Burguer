@@ -11,6 +11,20 @@ export const PaymentContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  @media (max-width: 1400px) {
+    min-width: 100%;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 6px;
+    margin: 0;
+    align-items: center;
+    padding: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    max-height: fit-content;
+  }
 `
 
 export const TitlePayment = styled.div`
@@ -34,10 +48,28 @@ export const TitlePayment = styled.div`
       color: ${(props) => props.theme['base-text']};
     }
   }
+
+  @media (max-width: 1400px) {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
 `
 export const ContainerButton = styled.span`
   display: flex;
   gap: 1.33rem;
+
+  @media (max-width: 1400px) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
 `
 export const ButtonStyle = styled.button`
   border: 0;
@@ -68,5 +100,17 @@ export const ButtonStyle = styled.button`
   &:hover {
     background-color: ${(props) => props.theme['base-hover']};
     cursor: pointer;
+  }
+
+  @media (max-width: 1400px) {
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+
+    p {
+      font-size: 0.8rem;
+      color: ${(props) => props.theme['base-text']};
+    }
   }
 `

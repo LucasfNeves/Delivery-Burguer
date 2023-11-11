@@ -8,10 +8,15 @@ export const ShoppingCarContainer = styled.section`
   flex-direction: column;
   gap: 2rem;
   height: fit-content;
-
   background-color: ${(props) => props.theme['base-card']};
   border-radius: 6px 44px 6px 44px;
   padding: 2.5rem;
+
+  @media (max-width: 1400px) {
+    width: 90%;
+    border-radius: 6px;
+    margin: 0;
+  }
 `
 export const ItensSelectedContainer = styled.ul`
   list-style-type: none;
@@ -30,10 +35,21 @@ export const ItensSelected = styled.figure`
   justify-content: flex-start;
   gap: 1rem;
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   img {
     width: 4.5rem;
     height: 4.5rem;
     border-radius: 6px;
+
+    @media (max-width: 768px) {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
   }
 
   figcaption {
@@ -42,6 +58,14 @@ export const ItensSelected = styled.figure`
     gap: 0.5rem;
     align-items: flex-start;
     justify-content: space-between;
+
+    @media (max-width: 768px) {
+      align-items: center;
+      gap: 1rem;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+    }
 
     span {
       font-size: 1rem;
@@ -55,6 +79,17 @@ export const ItensSelected = styled.figure`
       flex-direction: column;
       gap: 0.5rem;
 
+      div {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+        gap: 0.2rem;
+      }
+
       h4 {
         font-size: 1.3rem;
         color: ${(props) => props.theme['base-subtitle']};
@@ -62,7 +97,8 @@ export const ItensSelected = styled.figure`
 
       div {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
         gap: 0.5rem;
       }
@@ -86,9 +122,18 @@ export const ButtonRemoveItem = styled.button`
   font-size: 1rem;
   transition: background-color 0.2s;
 
+  @media (max-width: 768px) {
+    width: 80%;
+    justify-content: center;
+  }
+
   p {
     font-size: 0.8rem;
     color: ${(props) => props.theme['base-text']};
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   &:focus {
@@ -105,6 +150,12 @@ export const ConfirmOrderContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    gap: 0.5rem;
+    text-align: center;
+  }
 
   h3 {
     font-size: 1.5rem;

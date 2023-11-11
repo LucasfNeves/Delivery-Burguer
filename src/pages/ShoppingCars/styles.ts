@@ -5,5 +5,20 @@ export const FormContainer = styled.form`
   display: grid;
   grid-template-columns: 1fr 448px;
   grid-template-areas: 'form shoppingCar';
-  gap: 2rem;
+  gap: 5rem;
+
+  @media (max-width: 1400px) {
+    margin-top: 5rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'form' 'shoppingCar';
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'form' 'shoppingCar';
+    gap: 2rem;
+    justify-items: center;
+  }
 `
