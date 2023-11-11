@@ -34,8 +34,8 @@ export const HeaderContainer = styled.header`
     width: 100%;
 
     img {
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 3rem;
+      height: 3cm;
     }
   }
 
