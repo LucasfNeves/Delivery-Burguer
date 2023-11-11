@@ -8,6 +8,7 @@ import {
   ButtonRemoveItem,
   ConfirmOrderContainer,
 } from './styled'
+import { NavLink } from 'react-router-dom'
 
 export function ShoppingCarSection() {
   return (
@@ -17,25 +18,25 @@ export function ShoppingCarSection() {
           <ItensSelected>
             <img src={image} alt="" />
             <figcaption>
-              <div>
+              <section>
                 <h4>Big Burger 1</h4>
-                <div>
-                  <ButtonAddProduct>
-                    <button>
-                      <Plus weight="bold" />
-                    </button>
-                    <span>1</span>
-                    <button>
-                      <Minus weight="bold" />
-                    </button>
-                  </ButtonAddProduct>
-                  <ButtonRemoveItem>
-                    <Trash />
-                    <p>Remover</p>
-                  </ButtonRemoveItem>
-                </div>
+                <span>R$ 9,90</span>
+              </section>
+              <div>
+                <ButtonAddProduct>
+                  <button>
+                    <Plus weight="bold" />
+                  </button>
+                  <span>1</span>
+                  <button>
+                    <Minus weight="bold" />
+                  </button>
+                </ButtonAddProduct>
+                <ButtonRemoveItem>
+                  <Trash />
+                  <p>Remover</p>
+                </ButtonRemoveItem>
               </div>
-              <span>R$ 9,90</span>
             </figcaption>
           </ItensSelected>
         </li>
@@ -53,7 +54,13 @@ export function ShoppingCarSection() {
           <p>Total</p>
           <p>R$ 33,20</p>
         </span>
-        <button>confirmar pedido</button>
+        <NavLink
+          className="Navlink"
+          to="/CheckoutScreen"
+          title="confirmar pedido"
+        >
+          <button>confirmar pedido</button>
+        </NavLink>
       </ConfirmOrderContainer>
     </ShoppingCarContainer>
   )

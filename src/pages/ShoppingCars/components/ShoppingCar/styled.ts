@@ -56,6 +56,7 @@ export const ItensSelected = styled.figure`
   figcaption {
     width: 100%;
     display: flex;
+    flex-direction: column;
     gap: 0.5rem;
     align-items: flex-start;
     justify-content: space-between;
@@ -68,40 +69,43 @@ export const ItensSelected = styled.figure`
       justify-content: center;
     }
 
-    span {
-      font-size: 1rem;
-      font-weight: bold;
-      color: ${(props) => props.theme['base-text']};
+    section {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        font-size: 1rem;
+        font-weight: bold;
+        color: ${(props) => props.theme['base-text']};
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h4 {
+          font-size: 1.3rem;
+          color: ${(props) => props.theme['base-subtitle']};
+        }
+      }
     }
 
     div {
-      width: 10.6875rem;
+      width: 70%;
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
       gap: 0.5rem;
-
-      div {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-      }
 
       @media (max-width: 768px) {
         width: 100%;
         gap: 0.2rem;
-      }
-
-      h4 {
-        font-size: 1.3rem;
-        color: ${(props) => props.theme['base-subtitle']};
-      }
-
-      div {
-        display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        gap: 0.5rem;
+        justify-content: center;
       }
     }
   }
@@ -178,6 +182,10 @@ export const ConfirmOrderContainer = styled.div`
       font-size: 1.5rem;
       font-weight: bold;
     }
+  }
+
+  .Navlink {
+    text-decoration-line: none;
   }
 
   button {
