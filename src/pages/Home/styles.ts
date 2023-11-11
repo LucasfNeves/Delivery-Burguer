@@ -44,12 +44,10 @@ export const ContainerCards = styled.section`
   justify-items: center;
 
   @media (max-width: 992px) {
-    justify-items: flex-start;
+    width: 90%;
   }
 
   @media (max-width: 768px) {
-    width: 90%;
     grid-template-columns: 1fr;
-    justify-items: center;
   }
 `
