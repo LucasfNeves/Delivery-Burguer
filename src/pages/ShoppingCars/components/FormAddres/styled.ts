@@ -179,7 +179,7 @@ export const ContainerInput = styled.div`
     gap: 0.5rem;
   }
 
-  @media (max-width: 448pxpx) {
+  @media (max-width: 448px) {
     width: 100%;
   }
 `
