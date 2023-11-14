@@ -1,6 +1,4 @@
-import { Plus, Minus, Trash } from 'phosphor-react'
-import { ButtonAddProduct } from '../../../Home/components/CardsProduct/styles'
-import image from './../../../Home/data/assets/download 2.png'
+import { Trash } from 'phosphor-react'
 import {
   ShoppingCarContainer,
   ItensSelectedContainer,
@@ -9,6 +7,7 @@ import {
   ConfirmOrderContainer,
 } from './styled'
 import { NavLink } from 'react-router-dom'
+import { QuantityInput } from '../../../../components/QuantityInput'
 
 export function ShoppingCarSection() {
   return (
@@ -16,22 +15,19 @@ export function ShoppingCarSection() {
       <ItensSelectedContainer>
         <li>
           <ItensSelected>
-            <img src={image} alt="" />
+            <img src={''} alt="" />
             <figcaption>
               <section>
                 <h4>Big Burger 1</h4>
                 <span>R$ 9,90</span>
               </section>
               <div>
-                <ButtonAddProduct>
-                  <button>
-                    <Plus weight="bold" />
-                  </button>
-                  <span>1</span>
-                  <button>
-                    <Minus weight="bold" />
-                  </button>
-                </ButtonAddProduct>
+                <QuantityInput
+                  onIncrise={() => {}}
+                  onDecrise={() => {}}
+                  quantity={1}
+                />
+
                 <ButtonRemoveItem>
                   <Trash />
                   <p>Remover</p>
