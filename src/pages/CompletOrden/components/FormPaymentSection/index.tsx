@@ -6,7 +6,7 @@ import {
   ButtonStyle,
 } from './styled'
 
-export function SectionPayment() {
+export function SectionPaymentSection() {
   return (
     <PaymentContainer>
       <TitlePayment>

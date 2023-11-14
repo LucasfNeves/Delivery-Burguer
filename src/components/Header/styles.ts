@@ -6,6 +6,9 @@ export const HeaderContainer = styled.header`
   align-items: center;
   height: 5rem;
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
   background-color: ${({ theme }) => theme['base-background']};
 

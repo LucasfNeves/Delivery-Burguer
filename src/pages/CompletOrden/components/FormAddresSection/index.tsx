@@ -10,9 +10,9 @@ import {
   TitleSectionFormAddress,
   InputRuaAndCep,
 } from './styled'
-import { SectionPayment } from '../FormPayment'
+import { SectionPaymentSection } from '../FormPaymentSection'
 
-export function FormCompledYourRequest() {
+export function FormAddresSection() {
   return (
     <FillYourRequestContainer>
       <SectionFormAddress>
@@ -41,7 +41,7 @@ export function FormCompledYourRequest() {
           </InputSelect>
         </ContainerInput>
       </SectionFormAddress>
-      <SectionPayment />
+      <SectionPaymentSection />
     </FillYourRequestContainer>
   )
 }

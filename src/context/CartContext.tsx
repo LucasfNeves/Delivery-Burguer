@@ -8,6 +8,10 @@ export interface CartItem extends Burguers {
 interface CartContextType {
   cartItems: CartItem[]
   addToCart: (burguer: CartItem) => void
+  changeQuantityCartCard: (id: number, type: 'increase' | 'decrease') => void
+  removeFromCart: (id: number) => void
+  cartQuantity: number
+  cartItemsTotal: number
 }
 
 interface CartProviderProps {
@@ -19,8 +23,14 @@ export const CartContext = createContext({} as CartContextType)
 export function CartProvider({ children }: CartProviderProps) {
   const [cartItems, setCartItems] = useState<CartItem[]>([])
 
+  const cartQuantity = cartItems.reduce(
+    (quantity, item) => item.quantity + quantity,
+    0,
+  )
+
   function addToCart(burguer: CartItem) {
     const itemIndex = cartItems.findIndex((item) => item.id === burguer.id)
+    // se a consulta retornar -1, significa que o item não está no carrinho.
 
     // Cria uma cópia do carrinho atual
     const newCart = [...cartItems]
@@ -38,15 +48,56 @@ export function CartProvider({ children }: CartProviderProps) {
         quantity: newCart[itemIndex].quantity + burguer.quantity,
       }
     }
-
     // Define o novo carrinho de compras.
     setCartItems(newCart)
   }
 
-  console.log(cartItems)
+  function changeQuantityCartCard(id: number, type: 'increase' | 'decrease') {
+    // Cria uma cópia do carrinho
+    const newCart = [...cartItems]
+
+    // Verifica se o item existe
+    const itemIndex = newCart.findIndex((item) => item.id === id)
+
+    if (itemIndex >= 0) {
+      const item = newCart[itemIndex]
+
+      if (type === 'increase') {
+        item.quantity = item.quantity + 1
+      } else if (type === 'decrease') {
+        item.quantity = item.quantity - 1
+      }
+    }
+
+    setCartItems(newCart)
+  }
+
+  function removeFromCart(id: number) {
+    const newCart = [...cartItems]
+    const itemIndex = newCart.findIndex((item) => item.id === id)
+
+    if (itemIndex >= 0) {
+      newCart.splice(itemIndex, 1)
+      setCartItems(newCart)
+    }
+  }
+
+  const cartItemsTotal = cartItems.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0,
+  )
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart }}>
+    <CartContext.Provider
+      value={{
+        cartItems,
+        addToCart,
+        cartQuantity,
+        changeQuantityCartCard,
+        removeFromCart,
+        cartItemsTotal,
+      }}
+    >
       {children}
     </CartContext.Provider>
   )
