@@ -1,7 +1,13 @@
 import { Trash } from 'phosphor-react'
 import { QuantityInput } from '../../../../components/QuantityInput'
-import { ButtonRemoveItem } from '../ShoppingCarSection/styled'
-import { ItensSelected } from './styled'
+import {
+  ButtonRemoveItem,
+  ContainerButtons,
+  InfoIten,
+  ItensSelected,
+  PriceBurguer,
+  NameBurguer,
+} from './styled'
 import { CartContext, CartItem } from '../../../../context/CartContext'
 import { formatMoney } from '../../../../utils/formatMoney'
 import { useContext } from 'react'
@@ -29,13 +35,15 @@ export function SelectedBurguer({ burguer }: BurguerCartCardProps) {
 
   return (
     <ItensSelected>
-      <img src={burguer.Image} alt="" />
-      <figcaption>
-        <section>
-          <h4>{burguer.title}</h4>
-          <span>{formatedPrice}</span>
-        </section>
-        <div>
+      <figure>
+        <img src={burguer.Image} alt="" />
+      </figure>
+      <InfoIten>
+        <span>
+          <NameBurguer>{burguer.title}</NameBurguer>
+          <PriceBurguer>{formatedPrice}</PriceBurguer>
+        </span>
+        <ContainerButtons>
           <QuantityInput
             onIncrise={handleIncrise}
             onDecrise={handleDecrise}
@@ -46,8 +54,8 @@ export function SelectedBurguer({ burguer }: BurguerCartCardProps) {
             <Trash />
             <p>Remover</p>
           </ButtonRemoveItem>
-        </div>
-      </figcaption>
+        </ContainerButtons>
+      </InfoIten>
     </ItensSelected>
   )
 }

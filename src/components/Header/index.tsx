@@ -9,7 +9,7 @@ export function Header() {
 
   return (
     <HeaderContainer>
-      <NavLink to="/">
+      <NavLink className="navlink" to="/">
         <img src={logoPrimarySmall} alt="image" />
       </NavLink>
       <nav>

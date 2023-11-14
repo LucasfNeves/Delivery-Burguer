@@ -12,6 +12,13 @@ export const HeaderContainer = styled.header`
 
   background-color: ${({ theme }) => theme['base-background']};
 
+  .navlink {
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
   img {
     height: 3.75rem;
     width: 3.75rem;

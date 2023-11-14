@@ -39,7 +39,7 @@ export function CartProvider({ children }: CartProviderProps) {
       // Se o item não estiver no carrinho, adiciona-o com uma quantidade inicial de 1.
       newCart.push({
         ...burguer,
-        quantity: 1,
+        quantity: burguer.quantity,
       })
     } else {
       // Se o item já estiver no carrinho, atualiza a quantidade.

@@ -8,6 +8,7 @@ export const ContainerText = styled.section`
   align-items: center;
   justify-content: center;
   margin-top: 3rem;
+  background-repeat: no-repeat;
 
   .textContainer {
     flex: 1;
