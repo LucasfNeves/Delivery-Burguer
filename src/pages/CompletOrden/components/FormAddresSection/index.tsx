@@ -1,18 +1,14 @@
-import { MapPinLine } from 'phosphor-react'
+import { CurrencyDollar, MapPinLine } from 'phosphor-react'
 import {
-  ContainerInput,
-  InputWidth200,
-  InputComplement,
-  InputCity,
-  InputSelect,
-  SectionFormAddress,
   FillYourRequestContainer,
+  SectionFormAddress,
   TitleSectionFormAddress,
-  InputRuaAndCep,
-} from './styled'
-import { SectionPaymentSection } from '../FormPaymentSection'
+} from './components/AdressForm/styled'
+import { PaymentContainer, TitlePayment } from './styled'
+import { PayamentMethodOptions } from './components/PaymentMethodo'
+import { FormAddresSection } from './components/AdressForm'
 
-export function FormAddresSection() {
+export function CompleteOrderForm() {
   return (
     <FillYourRequestContainer>
       <SectionFormAddress>
@@ -23,25 +19,20 @@ export function FormAddresSection() {
           </span>
           <p>Informe o endereço onde deseja receber seu pedido</p>
         </TitleSectionFormAddress>
-        <ContainerInput>
-          <InputRuaAndCep type="number" placeholder="CEP" />
-        </ContainerInput>
-        <ContainerInput>
-          <InputRuaAndCep type="text" id="rua" placeholder="Rua" />
-        </ContainerInput>
-        <ContainerInput>
-          <InputWidth200 type="number" placeholder="Número" />
-          <InputComplement type="text" placeholder="Complemento (Opcional)" />
-        </ContainerInput>
-        <ContainerInput>
-          <InputWidth200 type="text" placeholder="Bairro" />
-          <InputCity type="text" placeholder="Cidade" />
-          <InputSelect name="selectUF">
-            <option value="uf">UF</option>
-          </InputSelect>
-        </ContainerInput>
+        <FormAddresSection />
       </SectionFormAddress>
-      <SectionPaymentSection />
+      <PaymentContainer>
+        <TitlePayment>
+          <span>
+            <CurrencyDollar />
+            <p>Pagamento</p>
+          </span>
+          <p>
+            O pagamento é feito na entrega. Escolha a forma que deseja pagar
+          </p>
+        </TitlePayment>
+        <PayamentMethodOptions />
+      </PaymentContainer>
     </FillYourRequestContainer>
   )
 }

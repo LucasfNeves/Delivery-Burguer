@@ -24,7 +24,7 @@ export function ConfirmOnderSection() {
         <p>Total</p>
         <p>{formatedPriceTotal}</p>
       </TotalValue>
-      <ButtomConfirmOrder disabled={cartQuantity <= 0}>
+      <ButtomConfirmOrder type="submit" disabled={cartQuantity <= 0}>
         confirmar pedido
       </ButtomConfirmOrder>
     </ConfirmOrderContainer>
