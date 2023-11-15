@@ -21,6 +21,7 @@ export const paymentMethods = {
 
 export function PayamentMethodOptions() {
   const { register } = useFormContext<ConfirmOrderFormData>()
+
   return (
     <ContainerButton>
       {/* object.entries pega a chave e o valor de um objeto e transforma em um array */}

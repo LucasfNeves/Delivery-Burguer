@@ -1,94 +1,5 @@
 import styled from 'styled-components'
 
-export const FillYourRequestContainer = styled.section`
-  width: 100%;
-  margin: 3.625rem 0;
-  grid-area: form;
-  display: flex;
-  flex-direction: column;
-  gap: 1.3rem;
-
-  @media (max-width: 1400px) {
-    width: 90%;
-    border-radius: 6px;
-    margin: 0;
-    align-items: center;
-  }
-
-  @media (max-width: 992px) {
-    width: 90%;
-    border-radius: 6px;
-    margin: 0;
-  }
-`
-
-export const SectionFormAddress = styled.div`
-  min-width: 40rem;
-  max-width: 40rem;
-  min-height: 23.25rem;
-  max-height: 23.25rem;
-  display: flex;
-  flex-direction: column;
-  padding: 2.5rem;
-  gap: 1rem;
-  background-color: ${(props) => props.theme['base-card']};
-  border-radius: 6px;
-
-  @media (max-width: 1400px) {
-    min-width: 100%;
-    max-width: 100%;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-    padding: 0 auto;
-  }
-
-  @media (max-width: 768px) {
-    min-width: 100%;
-    max-width: 100%;
-    max-height: fit-content;
-    width: 100%;
-    margin: 0;
-  }
-`
-
-export const TitleSectionFormAddress = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  margin-bottom: 1rem;
-  span {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: 0.5rem;
-    line-height: 1.6;
-
-    color: ${(props) => props.theme['yellow-dark']};
-    font-size: 1.375rem;
-
-    p {
-      margin: 0;
-      font-size: 1rem;
-      color: ${(porps) => porps.theme['base-text']};
-    }
-  }
-
-  p {
-    font-size: 0.8rem;
-    line-height: 1.6;
-    color: ${(props) => props.theme['base-label']};
-    margin-left: 1.9rem;
-  }
-
-  @media (max-width: 1400px) {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    gap: 0.5rem;
-  }
-`
-
 export const BaseInput = styled.input`
   height: 2.625rem;
   border: none;
@@ -139,7 +50,7 @@ export const InputCity = styled(BaseInput)`
   }
 `
 
-export const InputSelect = styled.select`
+export const InputSelect = styled.input`
   width: 3.75rem;
   height: 2.625rem;
   border: none;
@@ -164,6 +75,20 @@ export const InputSelect = styled.select`
     width: 100%;
   }
 `
+
+export const InputWrapper = styled.div`
+  flex: 1;
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+
+  > p {
+    color: ${(props) => props.theme['base-error']};
+    font-size: 0.8rem;
+  }
+`
+
 export const ContainerInput = styled.div`
   display: flex;
   gap: 12px;

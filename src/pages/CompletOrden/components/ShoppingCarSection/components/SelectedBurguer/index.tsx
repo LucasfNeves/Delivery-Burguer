@@ -1,5 +1,5 @@
 import { Trash } from 'phosphor-react'
-import { QuantityInput } from '../../../../components/QuantityInput'
+import { QuantityInput } from '../../../../../../components/QuantityInput'
 import {
   ButtonRemoveItem,
   ContainerButtons,
@@ -8,8 +8,8 @@ import {
   PriceBurguer,
   NameBurguer,
 } from './styled'
-import { CartContext, CartItem } from '../../../../context/CartContext'
-import { formatMoney } from '../../../../utils/formatMoney'
+import { CartContext, CartItem } from './../../../../../../context/CartContext'
+import { formatMoney } from '../../../../../../utils/formatMoney'
 import { useContext } from 'react'
 
 interface BurguerCartCardProps {

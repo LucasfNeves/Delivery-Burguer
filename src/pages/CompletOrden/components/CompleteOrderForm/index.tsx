@@ -3,12 +3,20 @@ import {
   FillYourRequestContainer,
   SectionFormAddress,
   TitleSectionFormAddress,
-} from './components/AdressForm/styled'
-import { PaymentContainer, TitlePayment } from './styled'
+  PaymentContainer,
+  TitlePayment,
+} from './styled'
 import { PayamentMethodOptions } from './components/PaymentMethodo'
 import { FormAddresSection } from './components/AdressForm'
+import { useFormContext } from 'react-hook-form'
+import { ConfirmOrderFormData } from '../../../../schemas/FormAdrressSchema'
 
 export function CompleteOrderForm() {
+  const {
+    formState: { errors },
+  } = useFormContext<ConfirmOrderFormData>()
+
+  const paymentMethodError = errors?.paymentMethod?.message as unknown as string
   return (
     <FillYourRequestContainer>
       <SectionFormAddress>
@@ -32,6 +40,7 @@ export function CompleteOrderForm() {
           </p>
         </TitlePayment>
         <PayamentMethodOptions />
+        {paymentMethodError && <p className="error">{paymentMethodError}</p>}
       </PaymentContainer>
     </FillYourRequestContainer>
   )

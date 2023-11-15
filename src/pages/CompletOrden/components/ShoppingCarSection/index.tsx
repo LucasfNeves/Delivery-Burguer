@@ -1,8 +1,8 @@
 import { ShoppingCarContainer, ItensSelectedContainer } from './styled'
-import { SelectedBurguer } from '../SelectedBurguer'
+import { SelectedBurguer } from './components/SelectedBurguer'
 import { useContext } from 'react'
 import { CartContext } from '../../../../context/CartContext'
-import { ConfirmOnderSection } from '../ConfirmOnderSection'
+import { ConfirmOnderSection } from './components/ConfirmOnderSection'
 
 export function ShoppingCarSection() {
   const { cartItems } = useContext(CartContext)

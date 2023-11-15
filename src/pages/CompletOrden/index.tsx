@@ -2,7 +2,7 @@ import {
   ConfirmOrderFormData,
   confirmOrderFormValidationSchema,
 } from '../../schemas/FormAdrressSchema'
-import { CompleteOrderForm } from './components/FormAddresSection'
+import { CompleteOrderForm } from './components/CompleteOrderForm'
 import { ShoppingCarSection } from './components/ShoppingCarSection'
 import { FormContainer } from './styles'
 import { zodResolver } from '@hookform/resolvers/zod'

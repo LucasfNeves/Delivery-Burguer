@@ -4,6 +4,10 @@ export const ContainerButton = styled.span`
   display: flex;
   gap: 1.33rem;
 
+  > p {
+    color: ${(props) => props.theme['base-error']};
+  }
+
   @media (max-width: 1400px) {
     width: 100%;
     justify-content: center;

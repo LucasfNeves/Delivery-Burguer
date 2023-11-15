@@ -19,4 +19,5 @@ export const defaultTheme = {
   'base-card': '#F3F2F2',
   shadown: '#CCCCCC',
   'base-background': '#FAFAFA',
+  'base-error': '#f75a68',
 }
