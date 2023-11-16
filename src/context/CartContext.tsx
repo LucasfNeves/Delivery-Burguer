@@ -11,6 +11,7 @@ interface CartContextType {
   addToCart: (burguer: CartItem) => void
   changeQuantityCartCard: (id: number, type: 'increase' | 'decrease') => void
   removeFromCart: (id: number) => void
+  clearCart: () => void
   cartQuantity: number
   cartItemsTotal: number
 }
@@ -82,7 +83,7 @@ export function CartProvider({ children }: CartProviderProps) {
     if (itemIndex >= 0) {
       newCart.splice(itemIndex, 1)
       setCartItems(newCart)
-      CartItemStorage.saveCartItems(newCart)
+      CartItemStorage.removeFromCart(id)
     }
   }
 
@@ -90,6 +91,11 @@ export function CartProvider({ children }: CartProviderProps) {
     (total, item) => total + item.price * item.quantity,
     0,
   )
+
+  function clearCart() {
+    setCartItems([])
+    CartItemStorage.clearCart()
+  }
 
   useEffect(() => {
     const storedCartItems = CartItemStorage.getCartItems()
@@ -107,6 +113,7 @@ export function CartProvider({ children }: CartProviderProps) {
         changeQuantityCartCard,
         removeFromCart,
         cartItemsTotal,
+        clearCart,
       }}
     >
       {children}

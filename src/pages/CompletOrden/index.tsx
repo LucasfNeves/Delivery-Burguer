@@ -8,8 +8,11 @@ import { ShoppingCarSection } from './components/ShoppingCarSection'
 import { FormContainer } from './styles'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm, FormProvider } from 'react-hook-form'
+import { useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
 
 export function ShoppingCars() {
+  const {clearCart} = useContext(CartContext)
   const confirmOrderForm = useForm<ConfirmOrderFormData>({
     resolver: zodResolver(confirmOrderFormValidationSchema),
   })
@@ -22,6 +25,8 @@ export function ShoppingCars() {
     navigate('/CheckoutScreen', {
       state: data,
     })
+
+    clearCart()
   }
 
   return (

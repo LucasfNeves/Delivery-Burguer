@@ -9,7 +9,26 @@ function getCartItems(): CartItem[] {
   return storagedCartItems ? JSON.parse(storagedCartItems) : []
 }
 
+export function removeFromCart(id: number) {
+  const newCart = getCartItems()
+  const itemIndex = newCart.findIndex((item) => item.id === id)
+
+  if (itemIndex >= 0) {
+    newCart.splice(itemIndex, 1)
+    saveCartItems(newCart)
+  }
+
+  return newCart
+}
+
+function clearCart() {
+  localStorage.clear()
+  return []
+}
+
 export const CartItemStorage = {
   saveCartItems,
   getCartItems,
+  removeFromCart,
+  clearCart,
 }
