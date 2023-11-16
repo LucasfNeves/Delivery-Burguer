@@ -1,7 +1,43 @@
-# Delivery-Burguer - Projeto Pessoal
+# Burger Delivery - Projeto Pessoal
 
+# Descrição do Projeto: BurgerDelivery - Sistema de Entrega de Hambúrgueres Online
 
+O Burger Delivery é um site dedicado à entrega de hambúrgueres, proporcionando aos clientes uma experiência prática e saborosa. O projeto é estruturado em duas páginas principais para facilitar a navegação e a conclusão de pedidos.
 
+## Página Inicial
+
+A **Página Inicial** recebe os usuários com uma exibição visualmente atraente dos hambúrgueres disponíveis. Cada card de hambúrguer inclui:
+
+- **Imagem:** Representação visual do hambúrguer para despertar o apetite.
+- **Nome:** Identificação única do hambúrguer.
+- **Descrição:** Breve descrição destacando os ingredientes e características especiais.
+- **Valor:** Preço do hambúrguer para informar as escolhas dos usuários.
+- **Quantidade:** Opções interativas para aumentar ou diminuir a quantidade desejada.
+- **Botão Adicionar no Carrinho:** Facilita a adição do hambúrguer ao carrinho de compras.
+
+O **Header** exibe informações essenciais:
+
+- **Quantidade no Carrinho:** Indicador dinâmico da quantidade de hambúrgueres no carrinho.
+- **Localização da Loja:** Cidade onde está localizado o serviço de entrega.
+## Página de Pedido
+
+Na **Página de Pedido**, os usuários encontram um formulário para inserir informações de entrega e escolher opções de pagamento. O formulário inclui validações para garantir o preenchimento correto dos campos obrigatórios.
+
+O **Carrinho de Compras** nesta página apresenta:
+
+- **Detalhes do Pedido:** Lista dos hambúrgueres selecionados, cada um exibindo a quantidade, nome e preço.
+- **Opções para Cada Item:** Botões para adicionar, diminuir a quantidade ou remover um hambúrguer do carrinho.
+- **Total da Compra:** Valor total da compra, incluindo valor de entrega.
+
+## Confirmação do Pedido
+
+Após preencher o formulário e revisar o pedido na **Página de Pedido**, os usuários podem confirmar o pedido. Ao clicar em "Confirmar Pedido", eles são direcionados para a **Página de Sucesso**.
+
+## Página de Sucesso
+
+Na **Página de Sucesso**, os usuários recebem uma confirmação visual de que o pedido foi recebido com sucesso. As informações preenchidas no formulário são exibidas como um resumo, proporcionando uma experiência satisfatória para os clientes.
+
+O BurgerDelivery visa simplificar o processo de entrega online de hambúrgueres, fornecendo uma interface amigável e eficiente, desde a escolha dos produtos até a confirmação do pedido.
 
 
 ## Acesse o Projeto:
