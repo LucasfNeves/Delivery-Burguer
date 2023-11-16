@@ -14,15 +14,15 @@ Você pode acessar o projeto por meio do link a seguir:
 # Tecnologias Utilizadas
 O projeto utiliza uma variedade de tecnologias para proporcionar uma experiência de aprendizado abrangente, incluindo:
 
-JavaScript: A linguagem de programação principal usada no projeto.
+- **JavaScript:** A linguagem de programação principal usada no projeto.
+- **CSS:** Para estilização e design da interface.
+- **React.js:** A biblioteca React é a base da aplicação, permitindo a construção de interfaces de usuário eficazes.
+- **TypeScript:** O TypeScript é integrado ao projeto para adicionar tipagem estática, tornando-o mais robusto e fácil de manter.
+- **Vite:** O ambiente de desenvolvimento Vite é escolhido para garantir um processo de desenvolvimento rápido e eficiente.
+- **Styled Components:** Utilizado para estilização baseada em componentes, oferecendo uma abordagem modular e reutilizável para o design da interface.
+- **Flexbox:** Implementado para facilitar o design responsivo e o posicionamento de elementos na interface, proporcionando uma experiência consistente em diferentes dispositivos.
+- **CSS Grid:** Empregado para criar layouts mais complexos e alinhamentos precisos na interface, contribuindo para uma organização visualmente atraente do conteúdo.
 
-CSS: Para estilização e design da interface.
-
-React.js: A biblioteca React é a base da aplicação, permitindo a construção de interfaces de usuário eficazes.
-
-TypeScript: O TypeScript é integrado ao projeto para adicionar tipagem estática, tornando-o mais robusto e fácil de manter.
-
-Vite: O ambiente de desenvolvimento Vite é escolhido para garantir um processo de desenvolvimento rápido e eficiente.
 
 # Conceitos Abordados
 Durante o desenvolvimento deste projeto, você terá a oportunidade de explorar e aplicar os seguintes conceitos fundamentais:
