@@ -4,6 +4,11 @@
 
 ![About](https://github.com/LucasfNeves/Delivery-Burguer/assets/136910031/c62d8b21-3f5a-4f8d-9d36-a4e8b53ff0bc)
 
+## Acesse o Projeto:
+Você pode acessar o projeto por meio do link a seguir:
+
+🚀  [Clique aqui e acesse o Projeto](https://delivery-burguer.vercel.app/)
+
 
 O Burger Delivery é um site dedicado à entrega de hambúrgueres, proporcionando aos clientes uma experiência prática e saborosa. O projeto é estruturado em duas páginas principais para facilitar a navegação e a conclusão de pedidos.
 
@@ -42,11 +47,6 @@ Na **Página de Sucesso**, os usuários recebem uma confirmação visual de que 
 
 O BurgerDelivery visa simplificar o processo de entrega online de hambúrgueres, fornecendo uma interface amigável e eficiente, desde a escolha dos produtos até a confirmação do pedido.
 
-
-## Acesse o Projeto:
-Você pode acessar o projeto por meio do link a seguir:
-
-🚀  [Clique aqui e acesse o Projeto](https://delivery-burguer.vercel.app/)
 
 
 ## Tecnologias Utilizadas
