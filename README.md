@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto: BurgerDelivery - Sistema de Entrega de Hambúrgueres Online
 
-![Cover]![About](https://github.com/LucasfNeves/Delivery-Burguer/assets/136910031/c62d8b21-3f5a-4f8d-9d36-a4e8b53ff0bc)
+![About](https://github.com/LucasfNeves/Delivery-Burguer/assets/136910031/c62d8b21-3f5a-4f8d-9d36-a4e8b53ff0bc)
 
 
 O Burger Delivery é um site dedicado à entrega de hambúrgueres, proporcionando aos clientes uma experiência prática e saborosa. O projeto é estruturado em duas páginas principais para facilitar a navegação e a conclusão de pedidos.
