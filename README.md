@@ -11,7 +11,7 @@ Você pode acessar o projeto por meio do link a seguir:
 🚀  [Clique aqui e acesse o Projeto](https://delivery-burguer.vercel.app/)
 
 
-# Tecnologias Utilizadas
+## Tecnologias Utilizadas
 O projeto utiliza uma variedade de tecnologias para proporcionar uma experiência de aprendizado abrangente, incluindo:
 
 - **JavaScript:** A linguagem de programação principal usada no projeto.
@@ -31,18 +31,26 @@ O projeto utiliza uma variedade de tecnologias para proporcionar uma experiênci
 - **CSS Grid:** Empregado para criar layouts mais complexos e alinhamentos precisos na interface, contribuindo para uma organização visualmente atraente do conteúdo.
 
 
-# Conceitos Abordados
-Durante o desenvolvimento deste projeto, você terá a oportunidade de explorar e aplicar os seguintes conceitos fundamentais:
+## Conceitos Abordados
 
-Componentização: A estrutura da aplicação é dividida em componentes reutilizáveis, facilitando a organização do código e a manutenção.
+- **Componentização:** A estrutura da aplicação é dividida em componentes reutilizáveis, facilitando a organização do código e a manutenção.
 
-Propriedades: A passagem de propriedades entre componentes permite a criação de uma aplicação dinâmica e interativa.
+- **Propriedades:** A passagem de propriedades entre componentes permite a criação de uma aplicação dinâmica e interativa.
 
-Estados: Os estados são utilizados para controlar o comportamento dinâmico dos componentes, permitindo a atualização de informações na interface do usuário.
+- **Estados:** Os estados são utilizados para controlar o comportamento dinâmico dos componentes, permitindo a atualização de informações na interface do usuário.
 
-Imutabilidade: O projeto segue o princípio da imutabilidade, garantindo o tratamento seguro e previsível dos dados.
+- **Imutabilidade:** O projeto segue o princípio da imutabilidade, garantindo o tratamento seguro e previsível dos dados.
 
-Hooks: São explorados diversos hooks, como useState e outros, para gerenciar estados e efeitos colaterais de forma eficaz.
+- **Hooks:** São explorados diversos hooks, como `useState`, `useContext`, `useForm` e outros, para gerenciar estados, efeitos colaterais e formulários de maneira eficaz.
+
+- **useContext:** Utilizado para compartilhar e acessar estados globais de forma eficiente entre componentes, promovendo uma comunicação mais direta.
+
+- **React Hook Form:** Integrado para simplificar o gerenciamento de formulários, melhorando a validação e a manipulação de dados de entrada.
+
+- **Biblioteca Immer:** Implementada para facilitar a produção de cópias imutáveis de objetos, tornando a manipulação de estados mais intuitiva.
+
+- **Local Storage:** Utilizado para persistir dados localmente no navegador, permitindo a recuperação de informações entre sessões da aplicação.
+
 
 ## Como Iniciar
 
