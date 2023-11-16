@@ -11,6 +11,7 @@ export const ShoppingCarContainer = styled.section`
   background-color: ${(props) => props.theme['base-card']};
   border-radius: 6px 44px 6px 44px;
   padding: 2.5rem;
+  box-shadow: 0px 0px 10px ${(props) => props.theme.shadown};
 
   @media (max-width: 1400px) {
     width: 90%;

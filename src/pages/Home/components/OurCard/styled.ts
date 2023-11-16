@@ -40,7 +40,7 @@ export const BurguerList = styled.section`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 4rem;
   justify-items: center;
 
   @media (max-width: 992px) {

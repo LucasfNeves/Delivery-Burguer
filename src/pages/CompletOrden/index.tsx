@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import {
   ConfirmOrderFormData,
   confirmOrderFormValidationSchema,
@@ -15,8 +16,12 @@ export function ShoppingCars() {
 
   const { handleSubmit } = confirmOrderForm
 
+  const navigate = useNavigate()
+
   function handleConfirmOrder(data: ConfirmOrderFormData) {
-    console.log(data)
+    navigate('/CheckoutScreen', {
+      state: data,
+    })
   }
 
   return (

@@ -1,5 +1,6 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import { Burguers } from '../pages/Home/components/BurguerCards'
+import { CartItemStorage } from '../LocalStorage/Storatge'
 
 export interface CartItem extends Burguers {
   quantity: number
@@ -50,6 +51,7 @@ export function CartProvider({ children }: CartProviderProps) {
     }
     // Define o novo carrinho de compras.
     setCartItems(newCart)
+    CartItemStorage.saveCartItems(newCart)
   }
 
   function changeQuantityCartCard(id: number, type: 'increase' | 'decrease') {
@@ -70,6 +72,7 @@ export function CartProvider({ children }: CartProviderProps) {
     }
 
     setCartItems(newCart)
+    CartItemStorage.saveCartItems(newCart)
   }
 
   function removeFromCart(id: number) {
@@ -79,6 +82,7 @@ export function CartProvider({ children }: CartProviderProps) {
     if (itemIndex >= 0) {
       newCart.splice(itemIndex, 1)
       setCartItems(newCart)
+      CartItemStorage.saveCartItems(newCart)
     }
   }
 
@@ -86,6 +90,13 @@ export function CartProvider({ children }: CartProviderProps) {
     (total, item) => total + item.price * item.quantity,
     0,
   )
+
+  useEffect(() => {
+    const storedCartItems = CartItemStorage.getCartItems()
+    if (storedCartItems) {
+      setCartItems(storedCartItems)
+    }
+  }, [])
 
   return (
     <CartContext.Provider

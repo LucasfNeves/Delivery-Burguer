@@ -39,6 +39,7 @@ export const PaymentContainer = styled.section`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  box-shadow: 0px 0px 10px ${(props) => props.theme.shadown};
 
   .error {
     color: ${(props) => props.theme['base-error']};
@@ -92,6 +93,7 @@ export const SectionFormAddress = styled.div`
   gap: 1rem;
   background-color: ${(props) => props.theme['base-card']};
   border-radius: 6px;
+  box-shadow: 0px 0px 10px ${(props) => props.theme.shadown};
 
   @media (max-width: 1400px) {
     min-width: 100%;

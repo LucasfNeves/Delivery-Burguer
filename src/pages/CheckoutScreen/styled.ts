@@ -1,10 +1,19 @@
 import styled from 'styled-components'
 
 export const Container = styled.main`
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'informations figure';
   gap: 6rem;
+
+  @media (max-width: 1400px) {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'informations' 'figure';
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+  }
 `
 
 export const Figure = styled.figure`
@@ -13,10 +22,27 @@ export const Figure = styled.figure`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  img {
+    width: 100%;
+    max-width: 34rem;
+  }
+
+  @media (max-width: 1400px) {
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 70%;
+      max-width: 70%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
 `
 export const Informations = styled.section`
   grid-area: informations;
   min-width: 36rem;
+  max-width: 36rem;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -25,6 +51,13 @@ export const Informations = styled.section`
   border-radius: 6px 36px;
   position: relative;
   background-color: white;
+
+  @media (max-width: 1400px) {
+    width: 90%;
+    min-width: 90%;
+    margin: 0;
+    align-items: flex-start;
+  }
 
   .iconMap {
     background-color: ${(props) => props.theme.purple};
@@ -71,6 +104,12 @@ export const Informations = styled.section`
         font-weight: bold;
       }
     }
+
+    @media (max-width: 1400px) {
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
   }
 
   &::before {
@@ -101,6 +140,23 @@ export const Legend = styled.legend`
   align-items: flex-start;
   margin-bottom: 2.5rem;
   margin-top: 3.75rem;
+
+  @media (max-width: 1400px) {
+    align-items: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+  }
 
   h1 {
     font-size: 2rem;

@@ -1,7 +1,10 @@
 import { CurrencyDollar, MapPin, Timer } from 'phosphor-react'
 import ImageCheckoutScreen from './../../assets/ImageCheckoutScreen.svg'
 import { Container, Figure, Informations, Legend } from './styled'
+import { useLocation } from 'react-router-dom'
+import { paymentMethods } from '../CompletOrden/components/CompleteOrderForm/components/PaymentMethodo'
 export function CheckoutScreen() {
+  const { state } = useLocation()
   return (
     <>
       <Legend>
@@ -18,9 +21,14 @@ export function CheckoutScreen() {
             </figure>
             <div>
               <p>
-                Entrega em <span>Rua João Daniel Martinelli, 102</span>
+                Entrega em &nbsp;
+                <span>
+                  {state.street}, {state.number}
+                </span>
               </p>
-              <span>Farrapos - Porto Alegre, RS</span>
+              <span>
+                {state.district} - {state.city}, {state.uf}
+              </span>
             </div>
           </article>
           <article>
@@ -38,7 +46,13 @@ export function CheckoutScreen() {
             </figure>
             <div>
               <p>Pagamento na entrega</p>
-              <span>Cartão de Crédito</span>
+              <span>
+                {
+                  paymentMethods[
+                    state.paymentMethod as keyof typeof paymentMethods
+                  ].label
+                }
+              </span>
             </div>
           </article>
         </Informations>
