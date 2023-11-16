@@ -1,6 +1,6 @@
 # Burger Delivery - Projeto Pessoal
 
-# Descrição do Projeto: BurgerDelivery - Sistema de Entrega de Hambúrgueres Online
+## Descrição do Projeto: BurgerDelivery - Sistema de Entrega de Hambúrgueres Online
 
 O Burger Delivery é um site dedicado à entrega de hambúrgueres, proporcionando aos clientes uma experiência prática e saborosa. O projeto é estruturado em duas páginas principais para facilitar a navegação e a conclusão de pedidos.
 
