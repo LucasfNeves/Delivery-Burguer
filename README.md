@@ -8,12 +8,7 @@ Bem-vindo ao projeto Ignite Feed, desenvolvido durante o primeiro módulo do Ign
 ## Acesse o Projeto:
 Você pode acessar o projeto por meio do link a seguir:
 
-🚀  [Clique aqui e acesse o Projeto](https://projeto-01-ignite-feed-rho.vercel.app/)
-
-
-## Também, você pode conferir o protótipo no Figma:
-
-🎨 [Clique aqui e acesse protótipo no Figma](https://www.figma.com/file/oDXSek9UeIgnDQnPpSgNvB/Ignite-Feed?type=design&t=FNRb1ptYUf2NR1Dd-6)
+🚀  [Clique aqui e acesse o Projeto](https://delivery-burguer.vercel.app/)
 
 
 # Tecnologias Utilizadas
