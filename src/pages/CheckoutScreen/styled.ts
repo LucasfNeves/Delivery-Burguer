@@ -32,8 +32,8 @@ export const Figure = styled.figure`
     justify-content: center;
     align-items: center;
     img {
-      width: 70%;
-      max-width: 70%;
+      width: 90%;
+      max-width: 90%;
       object-fit: cover;
       object-position: center;
     }
@@ -145,6 +145,7 @@ export const Legend = styled.legend`
     align-items: center;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
+    padding: 1rem;
 
     h1 {
       text-align: center;
