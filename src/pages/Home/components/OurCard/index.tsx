@@ -1,16 +1,20 @@
-import { burguers } from '../../../../data/burguers'
+import { useContext } from 'react'
 import { CardBurguer } from '../BurguerCards'
-import { BurguerList, Container } from './styled'
+import { BurguerContent, BurguerList, Container } from './styled'
+import { CartContext } from '../../../../context/CartContext'
 
 export function OurBurguer() {
+  const { burguers } = useContext(CartContext)
   return (
     <Container>
-      <h2>Nossos hambúrgueres</h2>
-      <BurguerList>
-        {burguers.map((burguer) => (
-          <CardBurguer key={burguer.id} burguer={burguer} />
-        ))}
-      </BurguerList>
+      <BurguerContent>
+        <h2>Nossos hambúrgueres</h2>
+        <BurguerList>
+          {burguers.map((burguer) => (
+            <CardBurguer key={burguer.id} burguer={burguer} />
+          ))}
+        </BurguerList>
+      </BurguerContent>
     </Container>
   )
 }

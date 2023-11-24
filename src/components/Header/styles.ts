@@ -1,14 +1,26 @@
 import styled from 'styled-components'
 
+export const Container = styled.div`
+  width: 100vw;
+  padding: 1rem 0 1rem;
+  background-color: ${({ theme }) => theme['base-background']};
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  @media (max-width: 990px) {
+    padding: 0.5rem 0 0.5rem;
+  }
+`
+
 export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5rem;
   width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin: 0 auto;
 
   background-color: ${({ theme }) => theme['base-background']};
 
@@ -32,6 +44,7 @@ export const HeaderContainer = styled.header`
 
   @media (max-width: 992px) {
     width: 100%;
+    padding: 0 2rem;
   }
 
   @media (max-width: 768px) {
@@ -45,7 +58,7 @@ export const HeaderContainer = styled.header`
 
     img {
       width: 3rem;
-      height: 3cm;
+      height: 3rem;
     }
   }
 

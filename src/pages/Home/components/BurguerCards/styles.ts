@@ -20,7 +20,7 @@ export const ContainerCard = styled.article`
     margin-bottom: 0.5rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 738px) {
     width: 95%;
     margin-bottom: 1rem;
     border-radius: 6px;

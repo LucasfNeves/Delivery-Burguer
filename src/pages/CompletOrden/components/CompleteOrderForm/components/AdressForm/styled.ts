@@ -68,7 +68,7 @@ export const InputSelect = styled.input`
   cursor: pointer;
 
   @media (max-width: 1400px) {
-    width: 40%;
+    width: 100%;
   }
 
   @media (max-width: 768px) {

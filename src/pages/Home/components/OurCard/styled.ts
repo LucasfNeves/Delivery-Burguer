@@ -1,7 +1,14 @@
 import styled from 'styled-components'
 
-export const Container = styled.main`
+export const Container = styled.div`
+  width: 100vw;
+`
+
+export const BurguerContent = styled.main`
   width: 100%;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -15,19 +22,16 @@ export const Container = styled.main`
   }
 
   @media (max-width: 992px) {
-    margin-top: 3rem;
-    width: 100vw;
-
-    h2 {
-      margin-bottom: 4rem;
-    }
+    width: 100%;
+    padding: 0 2rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
     margin-top: 2rem;
     margin-bottom: 2rem;
     align-items: center;
     width: 100vw;
+    padding: 0;
 
     h2 {
       font-size: 1.5rem;
@@ -45,9 +49,6 @@ export const BurguerList = styled.section`
 
   @media (max-width: 992px) {
     width: 90%;
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+    margin: 0 auto;
   }
 `

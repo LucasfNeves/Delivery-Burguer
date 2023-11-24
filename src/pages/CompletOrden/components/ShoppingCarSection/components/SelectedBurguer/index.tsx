@@ -10,8 +10,7 @@ import {
 } from './styled'
 import { CartContext, CartItem } from './../../../../../../context/CartContext'
 import { formatMoney } from '../../../../../../utils/formatMoney'
-import { useContext } from 'react'
-
+import { FormEvent, useContext } from 'react'
 interface BurguerCartCardProps {
   burguer: CartItem
 }
@@ -29,7 +28,8 @@ export function SelectedBurguer({ burguer }: BurguerCartCardProps) {
     changeQuantityCartCard(burguer.id, 'decrease')
   }
 
-  function handleRemove() {
+  function handleRemove(event: FormEvent) {
+    event.preventDefault()
     removeFromCart(burguer.id)
   }
 

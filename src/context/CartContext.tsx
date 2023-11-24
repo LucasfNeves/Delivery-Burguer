@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react'
 import { Burguers } from '../pages/Home/components/BurguerCards'
-import { CartItemStorage } from '../LocalStorage/Storatge'
+import { api } from '../lib/axios'
 
 export interface CartItem extends Burguers {
   quantity: number
@@ -12,8 +12,10 @@ interface CartContextType {
   changeQuantityCartCard: (id: number, type: 'increase' | 'decrease') => void
   removeFromCart: (id: number) => void
   clearCart: () => void
+  getBurguersAPI: () => Promise<void>
   cartQuantity: number
   cartItemsTotal: number
+  burguers: Burguers[]
 }
 
 interface CartProviderProps {
@@ -23,6 +25,7 @@ interface CartProviderProps {
 export const CartContext = createContext({} as CartContextType)
 
 export function CartProvider({ children }: CartProviderProps) {
+  const [burguers, setBurguers] = useState<Burguers[]>([])
   const [cartItems, setCartItems] = useState<CartItem[]>([])
 
   const cartQuantity = cartItems.reduce(
@@ -30,60 +33,88 @@ export function CartProvider({ children }: CartProviderProps) {
     0,
   )
 
-  function addToCart(burguer: CartItem) {
-    const itemIndex = cartItems.findIndex((item) => item.id === burguer.id)
-    // se a consulta retornar -1, significa que o item não está no carrinho.
+  async function getBurguersAPI() {
+    const response = await api.get('/burguers')
+    setBurguers(response.data)
+  }
 
-    // Cria uma cópia do carrinho atual
-    const newCart = [...cartItems]
+  useEffect(() => {
+    getBurguersAPI()
+  }, [])
+
+  // Adiciona a quantidade de um item no carrinho
+  async function addQuantityInTheCart(burguer: CartItem) {
+    try {
+      const itemIndex = cartItems.findIndex((item) => item.id === burguer.id)
+
+      const updatedItem = {
+        ...cartItems[itemIndex],
+        quantity: cartItems[itemIndex].quantity + burguer.quantity,
+      }
+
+      const updateQuantityItem = await api.put(
+        `/cartItems/${burguer.id}`,
+        updatedItem,
+      )
+
+      setCartItems((state) =>
+        state.map((item) =>
+          item.id === burguer.id ? updateQuantityItem.data : item,
+        ),
+      )
+    } catch (error) {
+      console.error('Erro ao adicionar quantidade no carrinho:', error)
+    }
+  }
+
+  // Adiciona um novo item no carrinho
+  async function addNewItenInTheCart(burguer: CartItem) {
+    try {
+      const response = await api.post('/cartItems', burguer)
+      setCartItems((state) => [...state, response.data])
+    } catch (error) {
+      console.error('Erro ao adicionar item no carrinho:', error)
+    }
+  }
+
+  // Faz a verificação se o item já existe no carrinho e chama a função correta
+  async function addToCart(burguer: CartItem) {
+    const itemIndex = cartItems.findIndex((item) => item.id === burguer.id)
 
     if (itemIndex < 0) {
-      // Se o item não estiver no carrinho, adiciona-o com uma quantidade inicial de 1.
-      newCart.push({
-        ...burguer,
-        quantity: burguer.quantity,
-      })
+      addNewItenInTheCart(burguer)
     } else {
-      // Se o item já estiver no carrinho, atualiza a quantidade.
-      newCart[itemIndex] = {
-        ...newCart[itemIndex],
-        quantity: newCart[itemIndex].quantity + burguer.quantity,
-      }
+      addQuantityInTheCart(burguer)
     }
-    // Define o novo carrinho de compras.
-    setCartItems(newCart)
-    CartItemStorage.saveCartItems(newCart)
   }
 
-  function changeQuantityCartCard(id: number, type: 'increase' | 'decrease') {
-    // Cria uma cópia do carrinho
-    const newCart = [...cartItems]
+  async function changeQuantityCartCard(
+    id: number,
+    type: 'increase' | 'decrease',
+  ) {
+    const itemIndex = cartItems.findIndex((item) => item.id === id)
 
-    // Verifica se o item existe
-    const itemIndex = newCart.findIndex((item) => item.id === id)
-
-    if (itemIndex >= 0) {
-      const item = newCart[itemIndex]
-
-      if (type === 'increase') {
-        item.quantity = item.quantity + 1
-      } else if (type === 'decrease') {
-        item.quantity = item.quantity - 1
-      }
+    const updatedItem = {
+      ...cartItems[itemIndex],
+      quantity:
+        type === 'increase'
+          ? cartItems[itemIndex].quantity + 1
+          : cartItems[itemIndex].quantity - 1,
     }
 
-    setCartItems(newCart)
-    CartItemStorage.saveCartItems(newCart)
+    const updateQuantityItem = await api.put(`/cartItems/${id}`, updatedItem)
+
+    setCartItems((state) =>
+      state.map((item) => (item.id === id ? updateQuantityItem.data : item)),
+    )
   }
 
-  function removeFromCart(id: number) {
-    const newCart = [...cartItems]
-    const itemIndex = newCart.findIndex((item) => item.id === id)
-
-    if (itemIndex >= 0) {
-      newCart.splice(itemIndex, 1)
-      setCartItems(newCart)
-      CartItemStorage.removeFromCart(id)
+  async function removeFromCart(id: number) {
+    try {
+      await api.delete(`/cartItems/${id}`)
+      setCartItems((state) => state.filter((item) => item.id !== id))
+    } catch (error) {
+      console.error('Erro ao remover item do carrinho:', error)
     }
   }
 
@@ -92,16 +123,31 @@ export function CartProvider({ children }: CartProviderProps) {
     0,
   )
 
+  async function deleteAllCartItems() {
+    try {
+      await api.delete('/cartItems')
+    } catch (error) {
+      console.error('Erro ao deletar todos os itens do carrinho:', error)
+    }
+  }
+
+  // Limpa o carrinho após a compra
   function clearCart() {
     setCartItems([])
-    CartItemStorage.clearCart()
+    deleteAllCartItems()
+  }
+
+  async function fetchCartItems() {
+    try {
+      const response = await api.get('/cartItems')
+      setCartItems(response.data)
+    } catch (error) {
+      console.error('Erro ao buscar itens do carrinho:', error)
+    }
   }
 
   useEffect(() => {
-    const storedCartItems = CartItemStorage.getCartItems()
-    if (storedCartItems) {
-      setCartItems(storedCartItems)
-    }
+    fetchCartItems()
   }, [])
 
   return (
@@ -114,6 +160,8 @@ export function CartProvider({ children }: CartProviderProps) {
         removeFromCart,
         cartItemsTotal,
         clearCart,
+        getBurguersAPI,
+        burguers,
       }}
     >
       {children}

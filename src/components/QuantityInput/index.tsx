@@ -13,12 +13,12 @@ export function QuantityInput({
 }: QuantityInputProps) {
   return (
     <Container>
-      <IconWrapper onClick={onIncrise}>
-        <Plus weight="bold" />
-      </IconWrapper>
-      <span>{quantity}</span>
       <IconWrapper disabled={quantity === 1} onClick={onDecrise}>
         <Minus weight="bold" />
+      </IconWrapper>
+      <span>{quantity}</span>
+      <IconWrapper onClick={onIncrise}>
+        <Plus weight="bold" />
       </IconWrapper>
     </Container>
   )
