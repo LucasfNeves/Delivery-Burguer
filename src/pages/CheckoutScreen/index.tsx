@@ -1,6 +1,12 @@
 import { CurrencyDollar, MapPin, Timer } from 'phosphor-react'
 import ImageCheckoutScreen from './../../assets/ImageCheckoutScreen.svg'
-import { CheckoutContainer, Container, Figure, Informations, Legend } from './styled'
+import {
+  CheckoutContainer,
+  Container,
+  Figure,
+  Informations,
+  Legend,
+} from './styled'
 import { useLocation } from 'react-router-dom'
 import { paymentMethods } from '../CompletOrden/components/CompleteOrderForm/components/PaymentMethodo'
 export function CheckoutScreen() {
