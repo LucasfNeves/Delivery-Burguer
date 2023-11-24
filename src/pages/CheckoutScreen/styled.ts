@@ -1,7 +1,14 @@
 import styled from 'styled-components'
 
+export const CheckoutContainer = styled.div`
+  width: 100vw;
+`
+
 export const Container = styled.main`
   width: 100%;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'informations figure';
@@ -133,6 +140,10 @@ export const Informations = styled.section`
 `
 
 export const Legend = styled.legend`
+  width: 100%;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   width: 100%;

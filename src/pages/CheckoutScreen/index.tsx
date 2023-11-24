@@ -1,12 +1,12 @@
 import { CurrencyDollar, MapPin, Timer } from 'phosphor-react'
 import ImageCheckoutScreen from './../../assets/ImageCheckoutScreen.svg'
-import { Container, Figure, Informations, Legend } from './styled'
+import { CheckoutContainer, Container, Figure, Informations, Legend } from './styled'
 import { useLocation } from 'react-router-dom'
 import { paymentMethods } from '../CompletOrden/components/CompleteOrderForm/components/PaymentMethodo'
 export function CheckoutScreen() {
   const { state } = useLocation()
   return (
-    <>
+    <CheckoutContainer>
       <Legend>
         <h1>Uhu! Pedido confirmado</h1>
         <p>
@@ -60,6 +60,6 @@ export function CheckoutScreen() {
           <img src={ImageCheckoutScreen} alt="" />
         </Figure>
       </Container>
-    </>
+    </CheckoutContainer>
   )
 }

@@ -51,6 +51,14 @@
       "description": "Pão brioche selado, empanado, queijo prato, alface picado, tomate, picles e maionese verde.",
       "price": 28.98,
       "quantity": 1
+    },
+    {
+      "id": 3,
+      "Image": "https://s3-alpha-sig.figma.com/img/0fef/f3a3/bcb684a5f2a6cfdf3e1e6674473cb0dc?Expires=1701043200&Signature=S95qtqZfw1QD7JJhdEy-gC-jtZfVOSykwVZP4~Q14xocK12fxHH~k4M4vIrgO29PQ-5PxcsGchVc46HqZ8cAlEpCg~mZWgMWVn9LbRHuPfU5xjlFXh3xDKjE33bERfoNgm88xfkjWTLXd9rfJwnGPAYW0UFFOFefXXcQk2y6tf-hCbGI~IiWpe24xIzqAvocJqLL5VEppnzeksDoA9goFt5E5vvb5-WWLoSJ~-FIjs8aT0fBUWYvKoOnsK9q9ZekkdgEaEUBGHT9sDhfDUlEfMeIIxD8nZcamNotnwki6f9IwiU8F3K-SUlRD2h-zY8cUSnDreZW~48afMT-bo2BIQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Sobrenatural",
+      "description": "Pão brioche selado, Burguer suculento grelhado na broiler, Catupiry, maionese da casa, farofa de bacon com pepperoni.",
+      "price": 40,
+      "quantity": 1
     }
   ]
 }
