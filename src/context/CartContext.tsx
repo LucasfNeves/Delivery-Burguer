@@ -77,7 +77,7 @@ export function CartProvider({ children }: CartProviderProps) {
       setCartItems(newCart)
     }
     setCartItems(newCart)
-    localStorage.getItem('cartItems')
+    CartItemStorage.saveCartItems(newCart)
   }
 
   useEffect(() => {
