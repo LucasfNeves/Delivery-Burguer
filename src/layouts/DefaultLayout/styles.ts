@@ -6,4 +6,5 @@ export const LayoutContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  overflow-x: hidden;
 `
