@@ -1,10 +1,8 @@
-import { useContext } from 'react'
 import { CardBurguer } from '../BurguerCards'
 import { BurguerContent, BurguerList, Container } from './styled'
-import { CartContext } from '../../../../context/CartContext'
+import { burguers } from '../../../../../data/burguer'
 
 export function OurBurguer() {
-  const { burguers } = useContext(CartContext)
   return (
     <Container>
       <BurguerContent>

@@ -43,54 +43,5 @@
       "price": 29.9
     }
   ],
-  "cartItems": [
-    {
-      "id": 3,
-      "Image": "https://s3-alpha-sig.figma.com/img/0fef/f3a3/bcb684a5f2a6cfdf3e1e6674473cb0dc?Expires=1701043200&Signature=S95qtqZfw1QD7JJhdEy-gC-jtZfVOSykwVZP4~Q14xocK12fxHH~k4M4vIrgO29PQ-5PxcsGchVc46HqZ8cAlEpCg~mZWgMWVn9LbRHuPfU5xjlFXh3xDKjE33bERfoNgm88xfkjWTLXd9rfJwnGPAYW0UFFOFefXXcQk2y6tf-hCbGI~IiWpe24xIzqAvocJqLL5VEppnzeksDoA9goFt5E5vvb5-WWLoSJ~-FIjs8aT0fBUWYvKoOnsK9q9ZekkdgEaEUBGHT9sDhfDUlEfMeIIxD8nZcamNotnwki6f9IwiU8F3K-SUlRD2h-zY8cUSnDreZW~48afMT-bo2BIQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-      "title": "Sobrenatural",
-      "description": "Pão brioche selado, Burguer suculento grelhado na broiler, Catupiry, maionese da casa, farofa de bacon com pepperoni.",
-      "price": 40,
-      "quantity": 1
-    },
-    {
-      "id": 2,
-      "Image": "https://s3-alpha-sig.figma.com/img/df03/b264/01415220b1931b5c8ebdcaeb6d2792b1?Expires=1701043200&Signature=PVq~E-MxaeMh7bK-VXLop6y8kk8yDPb0Fqf7j7~mUaQgHCuLEt~t4MBLhZLVPwIwGGXEmMhLy7zhkh2-jo7QhGvCCV35DJNNbShfjjIQ7b~SLjqLILYYnbd9H8mEWEy2LjsWf3EbSqP7ZXfzfqzg4RiptVAbfd0mU-Xkn6EN5EpSkSNCxquGVPAWiyGUhpYLG9gjxiJsQPQn17Ozx5GuSBc5WzsbYmXxwzf1ifC0JdvMm6wQxDvb~tdib60jEYnqdtqzDGS2haE0AYxymSB2H5Ityw~961lRbd94CBB7qvjkA1DqgpHyCRNG~DOob6ym1Ui4ec4f~PDo~KnP822TiA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-      "title": "Peaky Blinder",
-      "description": "Pão australiano selado, Burguer suculento grelhado na broiler, Onion Rings, Queijo Cheddar, Barbecue, Geleia de Bacon e Molho tasty.",
-      "price": 30,
-      "quantity": 1
-    },
-    {
-      "id": 1,
-      "Image": "https://s3-alpha-sig.figma.com/img/a7b2/8ee3/5f0485faaf9516792f2552f2b28d0e80?Expires=1701043200&Signature=gS1O13UVG~ILZYwZJixRKRFSlGzj4A2f0Zqvm4a6Jbbe0IIwUePi4JwFmmJP~1M2ffFQ7IO9E-hbb3pQFB2KsLfNoGxBniCkYH5zPlt99TUN6url1QdOo8vg2HzadX~qOmBmzjcXFzv18GG6i6rpBMdS7LPUzgYYigBPCSqJcPA~VrSTfWbt1a7jO7MJyhbgJ-RvQJfm8wi3~ZNOapH7PUPbj5vBiTCopI7Z33hEzXOB2wJz0TtkphSFg0Q0wCIu0Olp4jB~bTzRcT69ERHAVh9MlCAugGkkuUvnGde~N-5A4Hh82DyK96rKuUZRI-M-0u7ovNpEvEZ7PE4by9wBHQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-      "title": "Big Burger 1",
-      "description": "Pão brioche selado, empanado, queijo prato, alface picado, tomate, picles e maionese verde.",
-      "price": 28.98,
-      "quantity": 1
-    },
-    {
-      "id": 4,
-      "Image": "https://s3-alpha-sig.figma.com/img/be0e/f1c0/e4f41a87aa68095cb5ede01bbe4091df?Expires=1701043200&Signature=V5u33yqNPSbdku2q63PylSu6kF3I~2ynRI1009NYRUumig0aY-ey9siRDLyE61UBbgf8swIcBtBgZqYZkqbPv6XeAi6FvMu7e7u5SZCkP819YCuY900hCvUiQO4EhHWn0e2eogeuunVDbNw6mCDxuChAzxF0eo4NwuA1xEJqd~YtseU-Fk38XT92LcW9QSu-RKDbjAtqD8uW8OZWFEcaB3UsUeEzw~cYBt~t5T~Z17PG4eD-clvRgKOTduWNmT0Fr8xXSeZycC1JiJIveuBRzXUvru8qoBY1m2qg-RCCjAXTomx7P0vqJ~EqjcQ5NVjVGbiTZIppTEg5Qn~viPq25A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-      "title": "Ms. Marvel",
-      "description": "Pão brioche selado, Burguer suculento grelhado na broiler e queijo cheddar.",
-      "price": 9.9,
-      "quantity": 1
-    },
-    {
-      "id": 5,
-      "Image": "https://www.figma.com/file/7aiBJ03IWDXbTVdzMh0ZyV/image/025d0d452804403e9ba0405e8ff9f2a335a977a3",
-      "title": "Big Burger 2",
-      "description": "Pão brioche selado, carne, queijo prato, alface picado, tomate, picles e maionese verde.",
-      "price": 19.9,
-      "quantity": 1
-    },
-    {
-      "id": 6,
-      "Image": "https://www.figma.com/file/7aiBJ03IWDXbTVdzMh0ZyV/image/512890070335048473a1c9d6ca77dd925636a391",
-      "title": "Arrow",
-      "description": "Pão brioche selado, Burguer suculento grelhado na broiler, maionese verde, alface americana picadinha, tomate e mussarela maçaricado.",
-      "price": 29.9,
-      "quantity": 1
-    }
-  ]
+  "cartItems": []
 }
