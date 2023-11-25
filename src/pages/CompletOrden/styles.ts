@@ -1,13 +1,8 @@
 import styled from 'styled-components'
-import intro from '../../assets/Intro.png'
 
 export const Container = styled.div`
   width: 100vw;
   padding: 2rem 0 5rem;
-  background-image: url(${intro});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 `
 
 export const FormContainer = styled.form`
