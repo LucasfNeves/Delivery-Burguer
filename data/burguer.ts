@@ -22,7 +22,7 @@ export const burguers = [
   {
     id: 3,
     Image:
-      'https://www.figma.com/file/7aiBJ03IWDXbTVdzMh0ZyV/image/df03b264014152c20b1931b5c8ebdcaeb6d2792b1',
+      'https://www.figma.com/file/7aiBJ03IWDXbTVdzMh0ZyV/image/df03b26401415220b1931b5c8ebdcaeb6d2792b1',
     title: 'Sobrenatural',
     description:
       'Pão brioche selado, Burguer suculento grelhado na broiler, Catupiry, maionese da casa, farofa de bacon com pepperoni .',
