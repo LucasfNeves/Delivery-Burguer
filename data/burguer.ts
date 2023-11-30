@@ -2,7 +2,7 @@ export const burguers = [
   {
     id: 1,
     Image:
-      'https://www.figma.com/file/7aiBJ03IWDXbTVdzMh0ZyV/image/bcb684a5f2a6cfdf3e1e6674473cb0dc',
+      'https://figma.com/file/7aiBJ03IWDXbTVdzMh0ZyV/image/0feff3a3bcb684a5f2a6cfdf3e1e6674473cb0dc',
     title: 'Big Burger 1',
     description:
       'Pão brioche selado, empanado, queijo prato, alface picado, tomate, picles e maionese verde.',
@@ -12,7 +12,7 @@ export const burguers = [
   {
     id: 2,
     Image:
-      'https://www.figma.com/file/7aiBJ03IWDXbTVdzMh0ZyV/image/5f0485faaf9516792f2552f2b28d0e80',
+      'https://www.figma.com/file/7aiBJ03IWDXbTVdzMh0ZyV/image/a7b28ee35f0485faaf9516792f2552f2b28d0e80 ',
     title: 'Peaky Blinder',
     description:
       'Pão australiano selado, Burguer suculento grelhado na broiler, Onion Rings, Queijo Cheddar, Barbecue, Geleia de Bacon e Molho tasty.',
@@ -22,7 +22,7 @@ export const burguers = [
   {
     id: 3,
     Image:
-      'https://www.figma.com/file/7aiBJ03IWDXbTVdzMh0ZyV/image/01415220b1931b5c8ebdcaeb6d2792b1',
+      'https://www.figma.com/file/7aiBJ03IWDXbTVdzMh0ZyV/image/df03b264014152c20b1931b5c8ebdcaeb6d2792b1',
     title: 'Sobrenatural',
     description:
       'Pão brioche selado, Burguer suculento grelhado na broiler, Catupiry, maionese da casa, farofa de bacon com pepperoni .',
